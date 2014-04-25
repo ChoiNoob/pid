@@ -33,7 +33,7 @@ public class PIDController implements PIDSettings, Runnable
 	private final PIDOutput output;
 
 	@Override
-	public void run()
+	public synchronized void run()
 	{
 		double input =  this.input.getInput();
 
